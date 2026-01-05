@@ -1,0 +1,31 @@
+\usepackage{ifthen}
+\usepackage{environ}
+\usepackage{letltxmacro}
+\usepackage{amssymb}
+
+\newcounter{lingexmpl}
+\NewEnviron{lingex}[1][FALSE]
+  {
+    \leavevmode\newline
+    \refstepcounter{lingexmpl}
+    \par
+    (\arabic{lingexmpl})
+    \vspace{1cm}
+    \ifthenelse{\equal{#1}{FALSE}}{}{\label{#1}}
+    \parbox{10cm}{\BODY}
+    \hspace*{1cm}\par\vspace{1cm}
+  }
+
+% put parantheses around references
+\AtBeginDocument{%
+    \LetLtxMacro\oldref{\ref}%
+    \DeclareRobustCommand{\ref}[2][]{(\oldref#1{#2})}%
+}
+
+% root-sign
+\newcommand{\lroot}[1]{\raisebox{1mm}{$\sqrt{}$}#1}
+
+\newcommand{\MT}{$\mathfrak{M}$ }
+\newcommand{\LXX}{$\mathfrak{G}$ }
+\newfontfamily\DoulosSIL{Doulos SIL}
+\newcommand{\SamPent}{{\DoulosSIL ^^^^214f}}

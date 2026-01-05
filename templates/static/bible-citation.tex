@@ -1,0 +1,111 @@
+% reset footnote counter for each section
+\counterwithin*{footnote}{section}
+
+\usepackage{attrib}
+\def\PreTrib{} \def\PostTrib{} % We'll do our own parens, thanks!
+
+% \usepackage{verse}
+\usepackage{bibleref}
+\biblerefstyle{default}
+\brthreeabbrvname
+
+% Custom macros
+\newcommand{\bibverse}[2]{\ibibleverse{#1}{ #2}}
+\newcommand{\vattrib}[2]{\attrib{\bibverse{#1}{#2}}}
+\newcommand{\vattribtransl}[3]{\attrib{\bibverse{#1}{#2}, #3}}
+\newcommand\bibfoot[2]{\footnote{\bibverse{#1}{#2}}}
+
+% german book names
+% \setbooktitle{Judges}{Richter}
+% \setbooktitle{ISamuel}{1. Samuel}
+% \setbooktitle{IISamuel}{2. Samuel}
+% \setbooktitle{IKings}{1. Könige}
+% \setbooktitle{IIKings}{2. Könige}
+% \setbooktitle{IChronicles}{1. Chronik}
+% \setbooktitle{IIChronicles}{2. Chronik}
+% \setbooktitle{Psalms}{Psalm}
+% \setbooktitle{Proverbs}{Sprüche}
+% \setbooktitle{Ecclesiastes}{Prediger}
+% \setbooktitle{Song}{Hoheslied}
+% \setbooktitle{Job}{Hiob}
+
+% \setbooktitle{Isaiah}{Jesaja}
+% \setbooktitle{Jeremiah}{Jeremia}
+% \setbooktitle{Ezekiel}{Hesekiel}
+% \setbooktitle{Micah}{Micha}
+% \setbooktitle{Zechariah}{Sacharja}
+
+% \addbiblebook{Sirach}{Sirach}
+% \setbooktitle{Matthew}{Matthäus}
+% \setbooktitle{Luke}{Lukas}
+% \setbooktitle{John}{Johannes}
+% \setbooktitle{Acts}{Apostelgeschichte}
+
+% \setbooktitle{Romans}{Römer}
+% \setbooktitle{ICorinthians}{1. Korinther}
+% \setbooktitle{IICorinthians}{2. Korinther}
+% \setbooktitle{Colossians}{Kolosser}
+% \setbooktitle{Ephesians}{Epheser}
+% \setbooktitle{IThessalonians}{1. Thessalonicher}
+% \setbooktitle{Hebrews}{Hebräer}
+
+% \setbooktitle{James}{Jakobus}
+% \setbooktitle{IJohn}{1. Johannes}
+% \setbooktitle{IIJohn}{2. Johannes}
+% \setbooktitle{IIIJohn}{3. Johannes}
+% \setbooktitle{IPeter}{1. Petrus}
+% \setbooktitle{IIPeter}{2. Petrus}
+% \setbooktitle{Revelation}{Offenbarung}
+
+
+
+
+% German Short Book titles
+\setbooktitle{Genesis}{Gen}
+\setbooktitle{Exodus}{Ex}
+\setbooktitle{Leviticus}{Lev}
+\setbooktitle{Numbers}{Num}
+\setbooktitle{Deuteronomy}{Deut}
+
+\setbooktitle{Judges}{Ri}
+\setbooktitle{ISamuel}{1 Sam}
+\setbooktitle{IISamuel}{2 Sam}
+\setbooktitle{IKings}{1 Kö}
+\setbooktitle{IIKings}{2 Kö}
+\setbooktitle{IChronicles}{1 Chr}
+\setbooktitle{IIChronicles}{2 Chr}
+\setbooktitle{Psalms}{Ps}
+\setbooktitle{Proverbs}{Spr}
+\setbooktitle{Ecclesiastes}{Qoh}
+\setbooktitle{Song}{Hhld}
+\setbooktitle{Job}{Job}
+
+\setbooktitle{Isaiah}{Jes}
+\setbooktitle{Jeremiah}{Jer}
+\setbooktitle{Ezekiel}{Hes}
+\setbooktitle{Micah}{Mic}
+\setbooktitle{Zechariah}{Sach}
+
+\addbiblebook{Sirach}{Sir}
+
+\setbooktitle{Matthew}{Mt}
+\setbooktitle{Luke}{Lk}
+\setbooktitle{John}{Joh}
+\setbooktitle{Acts}{Apg}
+
+\setbooktitle{Romans}{Röm}
+\setbooktitle{ICorinthians}{1 Kor}
+\setbooktitle{IICorinthians}{2 Kor}
+\setbooktitle{Colossians}{Kol}
+\setbooktitle{Ephesians}{Eph}
+\setbooktitle{IThessalonians}{1 Thes}
+\setbooktitle{IIThessalonians}{2 Thes}
+\setbooktitle{Hebrews}{Heb}
+
+\setbooktitle{James}{Jak}
+\setbooktitle{IJohn}{1 Joh}
+\setbooktitle{IIJohn}{2 Joh}
+\setbooktitle{IIIJohn}{3 Joh}
+\setbooktitle{IPeter}{1 Pet}
+\setbooktitle{IIPeter}{2 Pet}
+\setbooktitle{Revelation}{Off}

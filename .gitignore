@@ -1,0 +1,14 @@
+.DS_Store
+
+# suppress a lot of tex specific files so we can directly compile here and keep git clean
+**/*.log
+**/*.bcf
+**/*.blg
+**/*.fdb_latexmk
+**/*.fls
+**/*.out
+**/*.run.xml
+**/*.synctex.gz
+**/*.aux
+**/*.bbl
+**/*.pdf

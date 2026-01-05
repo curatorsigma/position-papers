@@ -1,0 +1,82 @@
+%! TeX program = lualatex
+\documentclass[12pt]{article}
+
+% Language and Encoding
+\input{./static/languages.tex}
+
+% graphics
+\usepackage{graphicx}
+\graphicspath{ {./static/images} }
+
+% Bibtex
+\usepackage{csquotes}
+\usepackage[backend=biber,style=alphabetic,citestyle=alphabetic]{biblatex}
+\addbibresource{./static/Theologie_Bibliography.bib}
+% No S. in front of postnote, because I can't cite non-standard books otherwise
+\DeclareFieldFormat{postnote}{#1}
+
+% urls
+\usepackage{url}
+\setcounter{biburllcpenalty}{2000}
+\setcounter{biburlucpenalty}{2000}
+
+% Citing the Bible
+\input{./static/bible-citation.tex}
+
+% Example Numbering
+\input{./static/linguistic_examples.tex}
+
+% MISC
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+    citecolor=red,
+    linkcolor=blue
+}
+\usepackage{dsfont}
+\usepackage{enumerate}
+
+% Special Theorem style
+\usepackage{amsthm}
+\newtheoremstyle{aspektd}% name of the style to be used
+  {\topsep}% measure of space to leave above the theorem. E.g.: 3pt
+  {\topsep}% measure of space to leave below the theorem. E.g.: 3pt
+  {\mdseries}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  { ---}% punctuation between head and body
+  { }% space after theorem head; " " = normal interword space
+  {\thmname{#1}\thmnumber{ #2}\textnormal{\thmnote{ (#3)}}}
+
+\theoremstyle{aspektd}
+\newtheorem{aspekt}{Aspekt}
+
+\title{TODO - Template Title}
+\date{}
+\author{Jonathan Schleucher}
+
+\begin{document}
+
+{\let\newpage\relax\maketitle}
+
+\section{TODO - examples}
+You can now cite the bible like this: \bibfoot{Revelation}{1:6} or like this: \bibverse{Leviticus}{17:11}.
+Or cite some other useful works like the \Cite{bhs}.
+Write normal footnotes with this command\footnote{Hi, I am inside a footnote.}.
+
+Greek and hebrew can simply be included like this:
+\begin{quote}
+	 τὸν Ἑσρώμ, Ἑσρὼμ δὲ ἐγέννησεν τὸν Ἀράμ, 4Ἀρὰμ δὲ ἐγέννησεν τὸν Ἀμιναδάβ, Ἀμιναδὰβ δὲ ἐγέννησεν τὸν Ναασσών, Ναασσὼν δὲ ἐγέννησεν τὸν Σαλμών, 5Σαλμὼν δὲ ἐγέννησεν τὸν Βόες ἐκ τῆς Ῥαχάβ, Βόες δὲ ἐγέννησεν τὸν Ἰωβὴδ ἐκ τῆς Ῥούθ, Ἰωβὴδ δὲ ἐγέννησεν τὸν Ἰεσ
+	 \vattrib{Matthew}{1, \Cite{na28}}
+\end{quote}
+
+You can also use different sigla directly: \MT, \LXX.
+
+% Literaturverzeichnis
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\break
+\renewcommand{\thepage}{}
+\printbibliography
+
+\end{document}
