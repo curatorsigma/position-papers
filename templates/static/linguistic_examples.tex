@@ -16,12 +16,6 @@
     \hspace*{1cm}\par\vspace{1cm}
   }
 
-% put parantheses around references
-\AtBeginDocument{%
-    \LetLtxMacro\oldref{\ref}%
-    \DeclareRobustCommand{\ref}[2][]{(\oldref#1{#2})}%
-}
-
 % root-sign
 \newcommand{\lroot}[1]{\raisebox{1mm}{$\sqrt{}$}#1}
 

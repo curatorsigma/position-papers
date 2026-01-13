@@ -10,10 +10,9 @@
 \brthreeabbrvname
 
 % Custom macros
-\newcommand{\bibverse}[2]{\ibibleverse{#1}{ #2}}
-\newcommand{\vattrib}[2]{\attrib{\bibverse{#1}{#2}}}
-\newcommand{\vattribtransl}[3]{\attrib{\bibverse{#1}{#2}, #3}}
-\newcommand\bibfoot[2]{\footnote{\bibverse{#1}{#2}}}
+\newcommand{\bibverse}[3]{\ibibleverse{#1}({#2}:#3)}
+\newcommand{\vattrib}[3]{\attrib{\bibverse{#1}{#2}{#3}}}
+\newcommand{\bibfoot}[3]{\footnote{\bibverse{#1}{#2}{#3}}}
 
 % german book names
 % \setbooktitle{Judges}{Richter}
@@ -87,6 +86,7 @@
 \setbooktitle{Zechariah}{Sach}
 
 \addbiblebook{Sirach}{Sir}
+\setbooktitle{Wisdom}{Weish}
 
 \setbooktitle{Matthew}{Mt}
 \setbooktitle{Luke}{Lk}

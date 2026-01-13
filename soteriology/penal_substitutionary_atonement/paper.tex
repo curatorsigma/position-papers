@@ -1,0 +1,131 @@
+%! TeX program = lualatex
+\documentclass[12pt]{report}
+
+% Language and Encoding
+\input{./static/languages.tex}
+
+% graphics
+\usepackage{graphicx}
+\graphicspath{ {./static/images} }
+
+% Bibtex
+\usepackage{csquotes}
+\usepackage[backend=biber,style=alphabetic,citestyle=alphabetic]{biblatex}
+\addbibresource{./static/Theologie_Bibliography.bib}
+% No S. in front of postnote, because I can't cite non-standard books otherwise
+\DeclareFieldFormat{postnote}{#1}
+
+% urls
+\usepackage{url}
+\setcounter{biburllcpenalty}{2000}
+\setcounter{biburlucpenalty}{2000}
+
+% Citing the Bible
+\input{./static/bible-citation.tex}
+
+% Example Numbering
+\input{./static/linguistic_examples.tex}
+
+% MISC
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+    citecolor=red,
+    linkcolor=blue
+}
+\usepackage{dsfont}
+\usepackage{enumerate}
+ 
+\usepackage{imakeidx}
+
+% Special Theorem style
+\usepackage{amsthm}
+\newtheoremstyle{aspektd}% name of the style to be used
+  {\topsep}% measure of space to leave above the theorem. E.g.: 3pt
+  {\topsep}% measure of space to leave below the theorem. E.g.: 3pt
+  {\mdseries}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  { ---}% punctuation between head and body
+  { }% space after theorem head; " " = normal interword space
+  {\thmname{#1}\thmnumber{ #2}\textnormal{\thmnote{ (#3)}}}
+
+\theoremstyle{aspektd}
+\newtheorem{aspekt}{Aspekt}
+
+% special words
+\newcommand{\kipper}{כִּפֶּר (kipper)}
+
+\title{Penal Substitutionary Atonement}
+\date{}
+\author{Jonathan Schleucher}
+
+\makeindex
+
+\begin{document}
+
+{\let\newpage\relax\maketitle}
+
+\abstract{TODO}
+
+\tableofcontents
+
+\section*{Vorwort}
+Hierfür werde ich argumentieren:
+- Gott kann unabhängig von Jesus Tod Sünde vergeben (und tut das auch)
+- Jesus wurde am Kreuz nicht an unserer Stelle für unsere Sünden bestraft
+
+\pagebreak
+\input{chapter_01_das-levitische-system}
+
+\pagebreak
+\input{part_suende-und-vergebung}
+
+\pagebreak
+\part{\label{psa-definition}Penal Substitutionary Atonement}
+
+\chapter{Beweistexte}
+Intro: PSA ist falsch, weil es einfach nicht vorkommt.
+\section{Jesaja 52-53 - Partizipation im Leiden des Christus}
+\subsection{Rezeptionshistorie}
+\section{Galater 3:13 - Auslöschung des Bundesfluchs}
+\section{Römer 3:25 - Kein Opfer in Sicht}
+\section{Römer 8:3 - Gottes Urteil über die Sünde}
+\section{2. Korinther 5:21}
+
+\chapter{Die Probleme mit Penal Substitutionary Atonement}
+\section{Tod ist nicht immer Gottes Strafe}
+\section{Gott kann wirklich vergeben}
+\section{Gott ist einer}
+\section{Gott haßt PSA}
+- Gott hasst es, den gerechten zu bestrafen oder den ungerechten gerecht zu sprechen
+	- Hes 18
+- Der Sünder wird bestraft, nicht die Sünde
+- Sünde kann nicht übertragen werden
+	- der Sünder muss ausgelöscht werden, damit das Land nicht verunreinigt wird - nicht die Sünde, der Sünder
+
+\input{chapter_psa-in-church-history.tex}
+
+\pagebreak
+\part{Wenn nicht PSA, was dann?}
+\chapter{Ein Kaleidoskop der Versöhnung}
+\section{Christus Victor}
+\section{Loskauf}
+\section{Wiederhergestellte Ikone}
+\section{Apokalyptische Versöhnung}
+\section{Gegenseitige Partizipation}
+
+\chapter{Conclusio}
+\section{Warum musste Christus sterben?}
+\section{Was ist das Evangelium?}
+\section{Desiderata - Der Weg nach vorn}
+
+% Literaturverzeichnis
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\break
+\renewcommand{\thepage}{}
+\printbibliography
+\printindex
+
+\end{document}

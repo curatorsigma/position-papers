@@ -36,6 +36,7 @@
 }
 \usepackage{dsfont}
 \usepackage{enumerate}
+\usepackage{imakeidx}
 
 % Special Theorem style
 \usepackage{amsthm}
@@ -55,20 +56,21 @@
 \title{TODO - Template Title}
 \date{}
 \author{Jonathan Schleucher}
+\makeindex
 
 \begin{document}
 
 {\let\newpage\relax\maketitle}
 
 \section{TODO - examples}
-You can now cite the bible like this: \bibfoot{Revelation}{1:6} or like this: \bibverse{Leviticus}{17:11}.
+You can now cite the bible like this: \bibfoot{Revelation}{1}{6} or like this: \bibverse{Leviticus}{17}{11}.
 Or cite some other useful works like the \Cite{bhs}.
 Write normal footnotes with this command\footnote{Hi, I am inside a footnote.}.
 
 Greek and hebrew can simply be included like this:
 \begin{quote}
 	 τὸν Ἑσρώμ, Ἑσρὼμ δὲ ἐγέννησεν τὸν Ἀράμ, 4Ἀρὰμ δὲ ἐγέννησεν τὸν Ἀμιναδάβ, Ἀμιναδὰβ δὲ ἐγέννησεν τὸν Ναασσών, Ναασσὼν δὲ ἐγέννησεν τὸν Σαλμών, 5Σαλμὼν δὲ ἐγέννησεν τὸν Βόες ἐκ τῆς Ῥαχάβ, Βόες δὲ ἐγέννησεν τὸν Ἰωβὴδ ἐκ τῆς Ῥούθ, Ἰωβὴδ δὲ ἐγέννησεν τὸν Ἰεσ
-	 \vattrib{Matthew}{1, \Cite{na28}}
+	 \attrib{\bibverse{Matthew}{1}{}, \Cite{na28}}
 \end{quote}
 
 You can also use different sigla directly: \MT, \LXX.
@@ -78,5 +80,6 @@ You can also use different sigla directly: \MT, \LXX.
 \break
 \renewcommand{\thepage}{}
 \printbibliography
+\printindex
 
 \end{document}
