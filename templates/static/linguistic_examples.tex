@@ -3,18 +3,7 @@
 \usepackage{letltxmacro}
 \usepackage{amssymb}
 
-\newcounter{lingexmpl}
-\NewEnviron{lingex}[1][FALSE]
-  {
-    \leavevmode\newline
-    \refstepcounter{lingexmpl}
-    \par
-    (\arabic{lingexmpl})
-    \vspace{1cm}
-    \ifthenelse{\equal{#1}{FALSE}}{}{\label{#1}}
-    \parbox{10cm}{\BODY}
-    \hspace*{1cm}\par\vspace{1cm}
-  }
+% \usepackage{gb4e}
 
 % root-sign
 \newcommand{\lroot}[1]{\raisebox{1mm}{$\sqrt{}$}#1}
