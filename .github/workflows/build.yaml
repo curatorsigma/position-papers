@@ -14,7 +14,7 @@ jobs:
         with:
           work_in_root_file_dir: true
           root_file: |
-            soteriology/penal_substitutionary_atonement/paper.pdf
+            soteriology/penal_substitutionary_atonement/paper.tex
           latexmk_use_lualatex: true
           args: "-pdf -interaction=nonstopmode"
           extra_fonts: |
