@@ -17,6 +17,8 @@ jobs:
             soteriology/penal_substitutionary_atonement/paper.pdf
           latexmk_use_lualatex: true
           args: "-pdf -interaction=nonstopmode"
+          extra_fonts: |
+            ./static/fonts/**/*.ttf
       - name: Attach pdf to release
         uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
